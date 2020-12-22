@@ -42,10 +42,10 @@ AppAsset::register($this);
             ['label' => 'About', 'url' => ['/site/about']],
             ['label' => 'Contact', 'url' => ['/site/contact']],
             Yii::$app->user->isGuest ? (
-                ['label' => 'Login', 'url' => ['/site/login']]
+            ['label' => 'Login', 'url' => ['/auth/login']]
             ) : (
                 '<li>'
-                . Html::beginForm(['/site/logout'], 'post')
+                . Html::beginForm(['/auth/logout'], 'post')
                 . Html::submitButton(
                     'Logout (' . Yii::$app->user->identity->username . ')',
                     ['class' => 'btn btn-link logout']
@@ -59,18 +59,19 @@ AppAsset::register($this);
     ?>
 
     <div class="container">
-        <?= Breadcrumbs::widget([
-            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-        ]) ?>
-        <?= Alert::widget() ?>
-        <?= $content ?>
+        <!--main content start-->
+        <div class="main-content">
+            <div class="container">
+                <div class="row">
+                    <?= $content ?>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-
 <footer class="footer">
     <div class="container">
         <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
-
         <p class="pull-right"><?= Yii::powered() ?></p>
     </div>
 </footer>

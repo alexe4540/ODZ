@@ -118,4 +118,25 @@ class Article extends \yii\db\ActiveRecord
         }
         return '/web/no-image.png';
     }
+    public function getDate(){
+
+        return Yii::$app->formatter->asDate($this->date);
+
+    }
+    public function saveArticle()
+    {
+
+        $this->user_id = Yii::$app->user->id;
+
+        return $this->save();
+
+    }
+    public function viewedCounter()
+    {
+
+        $this->viewed +=1;
+
+        return $this->save(false);
+
+    }
 }

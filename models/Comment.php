@@ -100,4 +100,8 @@ class Comment extends \yii\db\ActiveRecord
     {
         return $this->hasMany(Comment::className(), ['comment_id' => 'id']);
     }
+    public function getDate()
+    {
+        return Yii::$app->formatter->asDate($this->date);
+    }
 }
