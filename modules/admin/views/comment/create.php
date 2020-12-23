@@ -9,7 +9,7 @@ $this->title = 'Create Comment';
 $this->params['breadcrumbs'][] = ['label' => 'Comments', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="comment-create">
+<div class="comment-create main-content1">
 
     <h1><?= Html::encode($this->title) ?></h1>
 

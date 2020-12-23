@@ -8,7 +8,7 @@ use yii\widgets\ActiveForm;
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="topic-form">
+<div class="topic-form main-content1">
 
     <?php $form = ActiveForm::begin(); ?>
 

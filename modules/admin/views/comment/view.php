@@ -11,7 +11,7 @@ $this->params['breadcrumbs'][] = ['label' => 'Comments', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
-<div class="comment-view">
+<div class="comment-view main-content1">
 
     <h1><?= Html::encode($this->title) ?></h1>
 

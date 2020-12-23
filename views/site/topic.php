@@ -5,6 +5,7 @@ use yii\helpers\Url;
 use yii\widgets\LinkPager;
 
 ?>
+<?php echo \Yii::$app->view->renderFile('@app/views/site/right.php', compact('popular','recent','topics'));?>
 
 <div class="col-md-8">
 
@@ -76,8 +77,4 @@ use yii\widgets\LinkPager;
 
 </div>
 
-<?php
 
-echo \Yii::$app->view->renderFile('@app/views/site/right.php', compact('popular','recent','topics'));
-
-?>

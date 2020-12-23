@@ -14,7 +14,7 @@ $this->title = 'Create Article';
 $this->params['breadcrumbs'][] = ['label' => 'Articles', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="article-create">
+<div class="article-create main-content1">
 
     <h1><?= Html::encode($this->title) ?></h1>
 

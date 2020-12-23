@@ -8,7 +8,7 @@ use yii\widgets\ActiveForm;
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="comment-form">
+<div class="comment-form main-content1">
 
     <?php $form = ActiveForm::begin(); ?>
 

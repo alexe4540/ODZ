@@ -71,7 +71,7 @@ class SiteController extends Controller
         $topics = Topic::find()->all();
         $query = Article::find();
         $count = $query->count();
-        $pagination = new Pagination(['totalCount' => $count, 'pageSize'=> 1]);
+        $pagination = new Pagination(['totalCount' => $count, 'pageSize'=> 3]);
         $articles = $query->offset($pagination->offset)
             ->limit($pagination->limit)
             ->all();
@@ -147,7 +147,7 @@ class SiteController extends Controller
         $query = Article::find()->where(['topic_id'=>$id]);
         $count = $query->count();
         // create a pagination object with the total count
-        $pagination = new Pagination(['totalCount' => $count, 'pageSize' => 1]);
+        $pagination = new Pagination(['totalCount' => $count, 'pageSize' => 3]);
         // limit the query using the pagination and retrieve the articles
         $articles = $query->offset($pagination->offset)
             ->limit($pagination->limit)

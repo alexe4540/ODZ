@@ -10,7 +10,7 @@ use yii\grid\GridView;
 $this->title = 'Comments';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="comment-index">
+<div class="comment-index main-content1">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
