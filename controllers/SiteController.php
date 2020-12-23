@@ -66,8 +66,8 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        $popular = Article::find()->orderBy('viewed desc')->limit(3)->all();
-        $recent = Article::find()->orderBy('date desc')->limit(3)->all();
+        $popular = Article::find()->orderBy('viewed desc')->limit(1)->all();
+        $recent = Article::find()->orderBy('date desc')->limit(1)->all();
         $topics = Topic::find()->all();
         $query = Article::find();
         $count = $query->count();
@@ -119,8 +119,8 @@ class SiteController extends Controller
     {
 
         $article = Article::findOne($id);
-        $popular = Article::find()->orderBy('viewed desc')->limit(3)->all();
-        $recent = Article::find()->orderBy('date desc')->limit(3)->all();
+        $popular = Article::find()->orderBy('viewed desc')->limit(1)->all();
+        $recent = Article::find()->orderBy('date desc')->limit(1)->all();
         $topics = Topic::find()->all();
         $comments = $article->comments;
         $commentsParent = array_filter($comments, function ($k) {
@@ -152,8 +152,8 @@ class SiteController extends Controller
         $articles = $query->offset($pagination->offset)
             ->limit($pagination->limit)
             ->all();
-        $popular = Article::find()->orderBy('viewed desc')->limit(3)->all();
-        $recent = Article::find()->orderBy('date desc')->limit(3)->all();
+        $popular = Article::find()->orderBy('viewed desc')->limit(1)->all();
+        $recent = Article::find()->orderBy('date desc')->limit(1)->all();
         $topics = Topic::find()->all();
         return $this->render('topic', [
             'articles' => $articles,
@@ -197,9 +197,9 @@ class SiteController extends Controller
 
             $data = $model->SearchAtricle(3);
 
-            $popular = Article::find()->orderBy('viewed desc')->limit(3)->all();
+            $popular = Article::find()->orderBy('viewed desc')->limit(1)->all();
 
-            $recent = Article::find()->orderBy('date desc')->limit(3)->all();
+            $recent = Article::find()->orderBy('date desc')->limit(1)->all();
 
             $topics = Topic::find()->all();
 

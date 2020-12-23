@@ -4,6 +4,9 @@
 use yii\helpers\Url;
 $this->title = 'FrontEnd Blog';
 ?>
+
+<?php echo \Yii::$app->view->renderFile('@app/views/site/right.php', compact('popular','recent','topics'));?>
+
 <div class="col-md-8">
     <?php foreach ($articles as $article): ?>
     <article class="post">
@@ -37,6 +40,3 @@ $this->title = 'FrontEnd Blog';
 ])
 ?>
 </div>
-
-<?php echo \Yii::$app->view->renderFile('@app/views/site/right.php', compact('popular','recent','topics'));?>
-<?= Url::toRoute(['/topic', 'id' => $article->topic->id]) ?>

@@ -7,6 +7,11 @@ body {
 .main-content {
     margin-top: 50px;
 }
+.main-content1{
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+}
 .row {
     margin-right: -15px;
     margin-left: -15px;
@@ -14,6 +19,7 @@ body {
 .post {
     background: #fff;
     margin-bottom: 50px;
+    border-radius: 20px;
 }
 article {
     border: 1px solid #eee;
@@ -28,6 +34,7 @@ a {
 }
 .post-thumb img {
     width: 100%;
+    border-radius: 20px;
 }
 .post-thumb {
     position: relative;
@@ -116,15 +123,11 @@ span, p, input {
     font-weight: 600;
 }
 .widget {
-
     padding: 37px 30px;
-
     margin-bottom: 35px;
-
     background-color: #fff;
-
     border: 1px solid #eee;
-
+    border-radius: 20px;
 }
 
 .widget-title {
@@ -157,6 +160,7 @@ span, p, input {
 
 .popular-img img {
     width: 100%;
+    border-radius: 8px;
 }
 img {
     max-width: 100%;
@@ -501,12 +505,12 @@ widget ul {
 .btn-serch {
 
     float: left;
-
+    border-radius: 7px;
     width: 20%;
 
     padding: 4px;
 
-    background: #2196F3;
+    background: #07365f;
 
     color: white;
 
@@ -517,11 +521,16 @@ widget ul {
     border-left: none;
 
     cursor: pointer;
-
+    transition: 0.7ms;
 }
 
 .btn-serch:hover {
+    transition: 0.7ms;
+    background: #042038;
 
-    background: #0b7dda;
-
+}
+.btn:hover, .btn:focus, .btn.focus {
+    color: #c0c0c0;
+    text-decoration: none;
+    transition: 0.4ms;
 }
